@@ -140,10 +140,3 @@ if you want to write a long explanation
 '''
 
 
-#fuck myself
-
-#another time
-
-
-
-
