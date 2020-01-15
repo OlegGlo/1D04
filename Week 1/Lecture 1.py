@@ -91,9 +91,9 @@ def Constants():
 
 def Statements():
 
-    #most of these his will be covered later on for now remeber:
+    #most of these his will be covered later on, for now remeber:
 
-    #FOR LOOPS
+    #'FOR' LOOPS
     #are used for definite loops
 
     aList = ["this","is","an","example"]
@@ -105,7 +105,7 @@ def Statements():
 
     print("-----")
 
-    #WHILE LOOPS
+    #'WHILE' LOOPS
     #are used for indefinite loops
 
     i = 1
@@ -127,16 +127,14 @@ Constants()
 
 #use comments to turn on or off each example
 
+
+
 #COMMENTS
 
 #use the hashtag for one line comments
 
 '''
-
 use these
 
 if you want to write a long explanation
-
 '''
-
-
