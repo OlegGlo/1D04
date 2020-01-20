@@ -83,11 +83,13 @@ DESIGN QUESTIONS:
 
 1. Does your program enforce _n_ and _t_ to be integers? If so, why is this necessary? If not, is this a problem?
 
-    It is neccesary as they are used to define the limits of the loop. i.e the loop cannot run to a half on an iteration
+    It is neccesary as they are used to define the limits of the loop. i.e the loop cannot run to a half an iteration
 
 2. What is another way to calculate C? i.e without using the exp function.
 
     Using math.e ** ... is also an option which is basically using a constant. Another way is hardcoding your own constant
+
+    *Using the loop approx. 1+(1/n) from lab 1
 
 3. Do you need to import math? If so, why? If not, why not?
 
@@ -97,34 +99,25 @@ DESIGN QUESTIONS:
 
     No it does not since we do not use the interator anywhere, the loop has to have 20 entries though
 
+    *starting at 1 is a good mathematical notation
+
 TESTING PLAN:
 
 Test 1
 Input: [p, r, n, t]
-Expected Output: [A, B (just the last value in the list), C, D, E]
-Actual Output: [Aa, Ba (just the last value in the list), Ca, Da, Ea]
+Expected Output: [A, B (just the last value in the list), C, D, E]              - FROM THE CALCULATOR
+Actual Output: [Aa, Ba (just the last value in the list), Ca, Da, Ea]           - FROM THE PYTHON FUNCTION
 Result: Pass/Fail
 
-Test 2
-Input: [p, r, n, t]
-Expected Output: [A, B (just the last value in the list), C, D, E]
-Actual Output: [Aa, Ba (just the last value in the list), Ca, Da, Ea]
-Result: Pass/Fail
 
-Test 3
-Input: [p, r, n, t]
-Expected Output: [A, B (just the last value in the list), C, D, E]
-Actual Output: [Aa, Ba (just the last value in the list), Ca, Da, Ea]
-Result: Pass/Fail
-
-WRITE A TESTER WITH CODE!!!
+ANOTHER ERROR IS FEEDING THE LOOP WITH A FLOAT
 
 '''
 
-initial_principle_p = [100, 1 ,200] 
-interest_rate_r = [0.5, 0.1, 0.2]
-number_per_year_n = [4, 1, 1]
-time_in_years_t = [5, 1, 2]
+initial_principle_p = [150, 1 ,200] 
+interest_rate_r = [0.3, 0.1, 0.2]
+number_per_year_n = [3, 1, 1]
+time_in_years_t = [4, 1, 2]
 
 Final_values = 0
 
