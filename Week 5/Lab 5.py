@@ -108,20 +108,23 @@ in a file: by reading the file once, or by reading the file three times?
 
 either one, we could use seek(0,0) to move cursor to the beggining
 
+more efficient to read once
+
 2. When printing to the screen, the syntax `print("x=", x, "\n")` and
 `print("x="+str(x)+"\n")` are both valid. Is this true when using `file.write()`?
 
-??? is it?
-
+write only accepts one argument, so you would have combine input into one big string before you write it
 
 3. Is it better if most of the test cases for your program 
 are files containing many lines of text? Explain your answer
 
 no because we are testing edge cases or different types if symbol
+make sure the file is not too big
 
 4. What is the difference between `read()` and `readlines()`?
 
 read() is just a big string, while readlines() is a list of strings depedning on their line
+
 
 
 '''
