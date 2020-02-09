@@ -2,7 +2,9 @@
 
 def Example_function():
 
-    print ("Hi")
+    list1 = []
+
+    
 
 Example_function()
 
