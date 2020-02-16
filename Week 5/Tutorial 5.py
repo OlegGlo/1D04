@@ -27,7 +27,7 @@ look what strip(",")
 
 '''
 
-#from graphics import *
+from graphics import *
 
 def main():
     win = GraphWin("My Circle", 1000, 1000)
@@ -53,7 +53,7 @@ def example():
     win.getMouse()
     win.close()
 
-#example()
+example()
 
 def practice2Major():
 
@@ -98,7 +98,7 @@ def practice2Major():
 
     file.close()
     
-practice2Major()
+#practice2Major()
 
 # a list of these
 

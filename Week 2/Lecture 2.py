@@ -1,44 +1,39 @@
-#Lecture 2 examples
+#Lecture 2 notes:
+'''
 
-def Example_function():
+Programs can be INTERPRETED line by line:
 
-    list1 = []
++ Interactive development and debugging of code
 
-    
+- Generally slower than other methods
 
-Example_function()
+Programs can be COMPILED into BYTE CODE:
+
++ Programs are more portable
+
+- Byte code is slower than native code
+
+Programs can be complied into NATIVE MACHINE CODE:
+
++ Machine code is optimized to run fast
+
+- Code development is more difficult
+
+
+ADA LOVELACE
+
+ - Considered the worlds first programmer
 
 '''
 
-List operations:
-.append
-.pop
-.remove
-.insert
-.index
-etc
+#Pyhton identifiers (variable names):
 
-find:
-orint(<value>, end = ' ') the end part specifially
+_value = 0 
+#-value = 0 because '-' is seen as a minus sign
+#value? = 0 because '?' is reserved
+my_value = 0
+#my-value = 0 because '-' is seen as a minus sign
 
-ACII characters in a string
-
-print(string[0:3])
-
-
-string opperations:
-+
-*
-len()
-index through string
-
-etc
-
-
-
-
-
-'''
 
 
 
