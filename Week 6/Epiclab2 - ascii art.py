@@ -107,6 +107,7 @@ def convertImageToAscii(fileName, cols, scale, moreLevels):
 def main():
     # creates a command line parser object using built-in argparse library
     descStr = "This program converts an image into ASCII art."
+
     parser = argparse.ArgumentParser(description=descStr)
     # add expected arguments - the first is completed for you as an example
     parser.add_argument('--file', dest='imgFile', required=True)
