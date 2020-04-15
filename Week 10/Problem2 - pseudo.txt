@@ -1,0 +1,136 @@
+
+class Date:
+    def __init__():
+        define object with self.d = date and etc
+
+    def getDay:
+        return self.d
+
+    def getMonth:
+        similar to prev
+
+    def getYear:
+        similar to prev
+
+    def daysInMonth():
+        use calendar library to determine how many days are in each months
+        return the int number of days
+
+    def stringconversion():
+        return the string output of the object for tesing and legibility
+
+    def Next():
+        if:
+            the selected day isnt the last day of month, return the current day + 1
+
+        elif:
+            if the current day is the last day of the month and the month is not december
+            return the first day of the month + 1
+
+        elif:
+            if the day is the last day of the year return the first day of jan and add 1 to the
+            current year
+
+        else:
+            return 0,0,0 if something triggers an exception
+
+    def Prev():
+        same principles as the prev method but with reversed parameters
+
+    def isBefore():
+        if the self. year is higher than the passed object year, return True
+
+        if the self. month is higher and year is the same .. return True
+
+        if the self. day is higher and year/month is the same .. return True
+
+        else:
+            return False
+
+    def isAfter():
+        same principles as the prev method but with reversed parameters
+
+    def add_days():
+
+        while:
+            add days to the current day while decreasing the passed integer
+        
+            account for years and months by resetting the days counter to 1
+            every time the month ends and do similar for years
+
+        return the resulting Date(day,month,year)
+
+    def daysBetween():
+        redefine local variables
+
+        simple method if the months and years are the same.
+
+        if the passed in object "d" is after:
+            
+            call in the aux function
+        
+        if the passed in object "d" is before:
+
+            swap the self.d.. and the passed objects data places and 
+            call in the aux function
+
+            (done for simplicity of code)
+
+        if the object is equal to the local object return 0 is 
+        show that objects are equal.
+
+    def daysBetweenAux():
+
+        add the days left in the current month -> store in x1
+
+        situation1:
+            years are the same but months different:
+            
+            while loop that keeps adding the month days to x2 until the
+            month before the target is reached. once reached add the objects
+            target day to the x2 counter
+
+        situation2:
+            years and months are different:
+
+            same principle as before but add the years in between the two variables
+            (cycle through the months while adding the number of days in each one of them)
+
+        summ up the x1 x2 and x3 and return as the "days in between" int
+
+Questions:
+1. No, it can be called anything like "myself" or anything else. Since it is not a
+keyword the naming is up to you, although by convention we use self.d
+2.
+function - method
+called by name - called by a name associated with an object
+is independant of an object - an object
+data is passed explicitly - data can be passed implicitly
+3.
+another method that could could be added to the class would be called DaysInMonth,
+it would output the total number of days in the current month taken into account leap
+years. This method would require a month and year as parameters in case it is used on a
+different object. It would make the implementation a lot easier because it would eliminate
+the need for a manually coded database.
+4.
+d.getDay() would be a better option. Using d.day is bad because we can alter the "day" variable
+within the object. Using a getter method prevents this and insures the principles of information hiding.
+
+Test 1 for method c
+Input: x = Date(12,5,2020), y = Date(16,3,2018)
+Expected Output: 788
+Actual Output: 788
+Result: Pass
+
+Test 2 for function add_days()
+Input: add_days(100000), x = Date(12,5,2020)
+Expected Output: 25/2/2294
+Actual Output: 25/2/2294
+Result: Pass
+
+Test 3 for function Prev()
+Input: x = Date(33,5,2020)
+Expected Output: Non - existant date
+Actual Output: NameError: Non - existant date
+Result: Pass
+

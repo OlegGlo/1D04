@@ -91,6 +91,11 @@ def AverageT(Tvalues):
 
     TvalueAvg = sum(Tvalues)/len(Tvalues) #avaraging the values
 
+    try:
+        TvalueAvg = sum(Tvalues)/len(Tvalues)
+    except ZeroDivisionError:
+        print("Zero division")
+
     return TvalueAvg
 
 def CalculateB(halfMaxInt,degrees,intensity, startpoint):
@@ -137,7 +142,7 @@ def CalculateB(halfMaxInt,degrees,intensity, startpoint):
     BminDegrees = 0 #converting those intensity values into degrees because i didnt read ahead
     BmaxDegrees = 0
 
-    for i in range(startpoint,len(degrees)):
+    for i in range(startpoint,len(degrees)): #convert intensity values into degree values
         if intensity[i] == Bmin[0]:
             BminDegrees = degrees[i]
 
@@ -163,3 +168,36 @@ def XDR_analysis(file): #Main, calls everthing
     return Tvalue
 
 XDR_analysis("XRD_example1.txt")
+
+#Testing AverageT():
+
+#normal
+#print(AverageT([1,2,3,5]))
+
+#boundry
+#print(AverageT([0,100000000]))
+
+#abnormal
+#print(AverageT([]))
+#division by zero
+
+'''
+Test 1 for function AverageT()
+Input: AverageT([1,2,3,5])
+Expected Output: 2.75
+Actual Output: 2.75
+Result: Pass
+
+Test 2 for function AverageT()
+Input: AverageT([0,100000000])
+Expected Output: 50000000
+Actual Output: 50000000.0
+Result: Pass
+
+Test 3 for function AverageT()
+Input: AverageT([])
+Expected Output: zero division error
+Actual Output: ZeroDivisionError: division by zero
+Result: Pass
+'''
+

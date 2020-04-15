@@ -1,0 +1,101 @@
+
+
+define constants
+
+def Convert:
+
+    define two lists for each type of value:
+
+    degrees
+    intensity
+    peak degrees
+    peak intensity
+
+    for:
+        go through each line in a file 
+        and sort data into each of the 
+        4 lists above
+
+        if:
+            if entry has a star sort it into a separate list
+            and delete the star for further data processing
+        
+    return each of the 4 lists
+
+def Plotting(degrees and intensity):
+    set the parameters of the plot graphs and output the data
+
+def CalculateT(degrees,intensity,peak degrees, peak intensity):
+    define local variables
+
+    select a point where the loop will start to increase efficiency
+    this point is selected to be right before each peak variable
+
+    for:
+        for each peak calculate a T value
+    
+    avarage the calculated T values
+
+    return the avarage value of T
+
+def CalculateB():
+
+    find the optimal position for the half of max intensity
+    do this by testing each point on the each side of the optimal level
+    and find the one with the lowest deviation from optimal
+
+    convert for max and min degrees and find the value of b for each peak
+
+XDR_analysis():
+
+    treat this as main
+
+    open file and pass it into convert
+
+    Calculate T values
+
+    Plot the data
+
+
+Test 1 for function AverageT()
+Input: AverageT([1,2,3,5])
+Expected Output: 2.75
+Actual Output: 2.75
+Result: Pass
+
+Test 2 for function AverageT()
+Input: AverageT([0,100000000])
+Expected Output: 50000000
+Actual Output: 50000000.0
+Result: Pass
+
+Test 3 for function AverageT()
+Input: AverageT([])
+Expected Output: zero division error
+Actual Output: ZeroDivisionError: division by zero
+Result: Pass
+
+The results do make sense as the fit in the 1 to 100 nanometer range outlined
+in the project specification document. As well as the fact that the wider peaks
+on graph 1 did correspond with a lower particle size when compared to data set 2.
+
+Reflection:
+    If this was a real project i would test the data manually using a ruller or another 
+method to approximate the results. I would do this for 2/3 data sets and then compare those
+to the results recieved using the script. If the trends from the manula methods remain in the
+computerized results i would consider the results accurate.
+
+    Moving forward, I would aim to optimize the algorithm to, first: take less memory and optimize calculations to make 
+processing of large amounts of data less time consuming. Second, i would aim to account for any unexpected 
+situations or errors that could occur when using the data collected, such as missing varibales or zero data points.
+
+
+
+    
+
+
+
+
+
+
+
